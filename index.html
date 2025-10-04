@@ -11,19 +11,93 @@
 </head>
 
 <body>
-    <!-- Main section start -->
-    <div class="main-overlay">
 
-        <div class="main">
+    <!-- Main section8/start -->
+    <div class="main-overlay w-screen h-screen bg-[#F9FAFB] flex justify-center items-center">
+
+        <div class="main w-6/10 h-8/10 border-1 rounded-md border-solid bg-[#ffffff] border-[#E5E7EB] flex justify-center items-center gap-6">
 
             <!-- Signee details section start -->
-            <div class="signee-details-section"></div>
+            <div
+                class=" signee-details-section w-5/11 h-9/10 flex flex-col justify-start items-start border-solid border-1 border-[#D1D5DB] bg-[#F3F4F6] rounded-sm gap-2">
+
+                <div class="title w-[150px] flex ">
+                    <img id="person" src="https://static.thenounproject.com/png/person-icon-8100876-512.png" alt="">
+                    <h2 class="text-[22px] font-bold"> Signee</h2>
+                </div>
+
+
+                <form action="" class=" flex flex-col justify-start items-start gap-2">
+
+                    <label for="name">Representative Name</label>
+                    <input type="text">
+
+                    <label for="">Email</label>
+                    <input type="email">
+
+                    <label for="number">Contact</label>
+                    <input type="tel">
+
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="4" cols="40"></textarea>
+                </form>
+            </div>
             <!-- Signee details section end -->
 
             <!-- Contract sign section start -->
-            <div class="sign-contract-section"></div>
-            <!-- Contract sign section end -->
+            <div class="sign-contract-section w-5/11 h-9/10 flex flex-col justify-start items-start border-solid border-1 border-[#D1D5DB] bg-[#F3F4F6] rounded-sm gap-2">
 
+                <!-- Contract Sign Button start -->
+                <button onclick="signForm()" class=" py-2 px-5 rounded-md bg-[#000000] text-[#FFFFFF] border-solid border-1 border-[#1F2937]">Sign Contract (Open Model)</button>
+                <!-- Contract sign button end -->
+
+                <!-- Sign Form start -->
+                <div class="sign-form  flex flex-col p-5 gap-3 hidden">
+
+                    <!-- Sign form title start -->
+                    <div class="sign-form-title flex justify-between ">
+                        <h2>Sign the Contract</h2>
+
+                        <button onclick="formClosed()">ESC&nbsp;&nbsp;x</button>
+                    </div>
+                    <!-- Sign form title end  -->
+
+
+                    <hr>
+
+                    <!-- Signature box start -->
+                    <canvas id="canvas"
+                        class="sign-box w-full h-[80px] border-1 border-solid flex justify-center items-end">
+                    </canvas>
+
+                    <button class="flex" onclick="clearCanvas()">
+                        <img id="clear" src="https://static.thenounproject.com/png/clear-icon-6327708-512.png" alt="">
+                        Clear
+                    </button>
+                    <!-- Signature box end -->
+
+
+                    <p class="text-[14px] text-[#A0A1A7]">This contract will be signed by and sent to the subsequent
+                        signee</p>
+
+                    <label class="text-[12px] flex justify-start items-start gap-2">
+                        <input id="checkbox" type="checkbox">
+                        By signing, I confirm that I have read and therefore agree to all ** contracted terms **, which
+                        become legally binding.
+                    </label>
+
+                    <div class="sign-form-footer flex justify-between items-center">
+
+                        <button class="border-1 px-3 py-2 rounded-md">Manage Signatures</button>
+
+                        <button class="bg-black text-[white] px-3 py-2 rounded-md">Sign the contract</button>
+                    </div>
+
+                </div>
+                <!-- Sign Form end -->
+
+            </div>
+            <!-- Contract sign section end -->
 
         </div>
     </div>
