@@ -30,6 +30,7 @@ function signForm() {
     if (form) {
         form.classList.remove("hidden");
     }
+    console.log("clicked")
 }
 
 function formClosed() {
